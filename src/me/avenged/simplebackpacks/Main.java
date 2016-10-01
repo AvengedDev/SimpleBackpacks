@@ -47,7 +47,7 @@ public class Main extends JavaPlugin {
 
     private void registerListeners() {
         PluginManager pm = Bukkit.getServer().getPluginManager();
-
+    //Hi
     }
 
     private void registerCommands() {
