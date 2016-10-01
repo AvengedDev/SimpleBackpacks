@@ -1,6 +1,8 @@
 package me.avenged.simplebackpacks.listeners;
 
 import me.avenged.simplebackpacks.Main;
+import me.avenged.simplebackpacks.Player.NewPlayer;
+import me.avenged.simplebackpacks.Player.PlayerManager;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,6 +24,8 @@ public class PlayerJoin implements Listener {
         if(!(config.contains(p.getUniqueId().toString()))){
             config.set(p.getUniqueId().toString() + ".Name", p.getName());
         }
+
+        NewPlayer np = PlayerManager.getPlayerObject(p);
 
     }
 
