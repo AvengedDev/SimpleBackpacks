@@ -43,5 +43,13 @@ public class Main extends JavaPlugin {
         System.out.println("[SimpleBackpacks] Plugin disabled.");
     }
 
+    public static void saveInvFile(){
+        try {
+            config.save(inventoryFile);
+        }catch(IOException e){
+
+        }
+    }
+
 
 }
