@@ -7,6 +7,10 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class Main extends JavaPlugin {
 
+    public static String Format(String text) {
+        return text.replaceAll("&", "§");
+    }
+
     public void onEnable(){
         System.out.println("H");
     }
