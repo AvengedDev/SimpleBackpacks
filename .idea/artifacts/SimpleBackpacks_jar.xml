@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SimpleBackpacks:jar">
+    <output-path>$USER_HOME$/Desktop/Plugin Server/plugins</output-path>
+    <root id="archive" name="SimpleBackpacks.jar">
+      <element id="module-output" name="SimpleBackpacks" />
+    </root>
+  </artifact>
+</component>
