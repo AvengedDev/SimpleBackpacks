@@ -8,6 +8,11 @@ import org.bukkit.command.CommandSender;
  * Created by Avenged_ on 9/30/2016.
  */
 public class Backpack implements CommandExecutor {
+
+    public static String Format(String text) {
+        return text.replaceAll("&", "§");
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
