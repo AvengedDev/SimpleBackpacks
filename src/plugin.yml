@@ -3,3 +3,6 @@ name: SimpleBackpacks
 author: Avenged & Dragon
 version: 1.0
 description: Simple Backpacks plugin.
+commands:
+  backpack:
+    description: A simple backpack plugin.

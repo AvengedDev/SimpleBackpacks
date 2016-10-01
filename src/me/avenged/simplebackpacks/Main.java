@@ -1,5 +1,6 @@
 package me.avenged.simplebackpacks;
 
+import me.avenged.simplebackpacks.commands.Backpack;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
@@ -50,6 +51,7 @@ public class Main extends JavaPlugin {
     }
 
     private void registerCommands() {
+        getCommand("backpack").setExecutor(new Backpack());
 
     }
 
