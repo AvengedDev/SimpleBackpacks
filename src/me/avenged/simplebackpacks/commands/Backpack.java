@@ -1,5 +1,7 @@
 package me.avenged.simplebackpacks.commands;
 
+import me.avenged.simplebackpacks.Player.NewPlayer;
+import me.avenged.simplebackpacks.Player.PlayerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -24,7 +26,6 @@ public class Backpack implements CommandExecutor {
             if (cmd.getName().equalsIgnoreCase("backpack")) {
 
                 Player p = (Player) sender;
-
 
                 }
             }

@@ -22,27 +22,16 @@ public class NewPlayer {
 
     private void createBackpack(){
         String perm = "simplebackpacks.size.";
-        if(p.hasPermission(perm + "1")){
-            slots = 9;
-        }else if(p.hasPermission(perm + "2")){
-            slots = 18;
-        }else if(p.hasPermission(perm + "3")){
-            slots = 27;
-        }else if(p.hasPermission(perm + "4")){
-            slots = 36;
-        }else if(p.hasPermission(perm + "5")){
-            slots = 45;
-        }else if(p.hasPermission(perm + "6")){
-            slots = 54;
-        }else if(p.hasPermission(perm + "7")){
-            slots = 63;
-        }else if(p.hasPermission(perm + "8")){
-            slots = 72;
-        }else if(p.hasPermission(perm + "9")){
-            slots = 81;
+        for(int i = 1; i <= 9; i++){
+            if(p.hasPermission(perm + i)){
+                slots = i * 9;
+            }
         }
-
         this.inv = Bukkit.createInventory(null, this.slots, Main.Format("&6" + getPlayer().getName() + "'s backpack"));
+    }
+
+    public void openInventory(){
+        p.openInventory(getInv());
     }
 
     public Player getPlayer(){
