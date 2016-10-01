@@ -1,7 +1,9 @@
 package me.avenged.simplebackpacks;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -43,5 +45,13 @@ public class Main extends JavaPlugin {
         System.out.println("[SimpleBackpacks] Plugin disabled.");
     }
 
+    private void registerListeners() {
+        PluginManager pm = Bukkit.getServer().getPluginManager();
+
+    }
+
+    private void registerCommands() {
+
+    }
 
 }
