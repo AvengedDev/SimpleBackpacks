@@ -1,5 +1,6 @@
 package me.avenged.simplebackpacks;
 
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -10,13 +11,16 @@ public class Main extends JavaPlugin {
     public static String Format(String text) {
         return text.replaceAll("&", "§");
     }
+    public static Plugin plugin;
 
     public void onEnable(){
-        System.out.println("H");
+        plugin = this;
+        System.out.println("[SimpleBackpacks] Plugin enabled.");
     }
 
     public void onDisable(){
-
+        plugin = null;
+        System.out.println("[SimpleBackpacks] Plugin disabled.");
     }
 
 
