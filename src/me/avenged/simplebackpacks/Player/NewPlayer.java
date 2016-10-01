@@ -22,12 +22,12 @@ public class NewPlayer {
 
     private void createBackpack(){
         String perm = "simplebackpacks.size.";
-        for(int i = 1; i <= 9; i++){
+        for(int i = 1; i <= 6; i++){
             if(p.hasPermission(perm + i)){
                 slots = i * 9;
             }
         }
-        this.inv = Bukkit.createInventory(null, this.slots, Main.Format("&6" + getPlayer().getName() + "'s backpack"));
+        this.inv = Bukkit.createInventory(null, this.slots, Main.Format("&e&l" + getPlayer().getName() + "'s backpack"));
     }
 
     public void openInventory(){

@@ -23,6 +23,7 @@ public class PlayerJoin implements Listener {
         // Player data does not exist, make new player data.
         if(!(config.contains(p.getUniqueId().toString()))){
             config.set(p.getUniqueId().toString() + ".Name", p.getName());
+            Main.saveInv();
         }
 
         NewPlayer np = PlayerManager.getPlayerObject(p);

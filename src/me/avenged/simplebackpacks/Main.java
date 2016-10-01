@@ -52,6 +52,14 @@ public class Main extends JavaPlugin {
         System.out.println("[SimpleBackpacks] Plugin disabled.");
     }
 
+    public static void saveInv(){
+        try{
+            config.save(inventoryFile);
+        }catch(IOException e){
+
+        }
+    }
+
     private void registerListeners() {
         PluginManager pm = Bukkit.getServer().getPluginManager();
         pm.registerEvents(new PlayerJoin(), this);
