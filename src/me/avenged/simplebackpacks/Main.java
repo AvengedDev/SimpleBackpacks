@@ -1,6 +1,7 @@
 package me.avenged.simplebackpacks;
 
 import me.avenged.simplebackpacks.commands.Backpack;
+import me.avenged.simplebackpacks.listeners.PlayerJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
@@ -24,6 +25,8 @@ public class Main extends JavaPlugin {
     public static YamlConfiguration config;
 
     public void onEnable() {
+        registerCommands();
+        registerListeners();
         plugin = this;
         System.out.println("[SimpleBackpacks] Plugin enabled.");
 
@@ -48,6 +51,7 @@ public class Main extends JavaPlugin {
 
     private void registerListeners() {
         PluginManager pm = Bukkit.getServer().getPluginManager();
+        pm.registerEvents(new PlayerJoin(), this);
     }
 
     private void registerCommands() {
