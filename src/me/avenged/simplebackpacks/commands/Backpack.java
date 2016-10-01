@@ -30,7 +30,6 @@ public class Backpack implements CommandExecutor {
                 NewPlayer np = PlayerManager.getPlayerObject(p);
                 np.openInventory();
 
-
             }
         }
 

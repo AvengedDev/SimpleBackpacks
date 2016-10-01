@@ -27,6 +27,9 @@ public class Main extends JavaPlugin {
         plugin = this;
         System.out.println("[SimpleBackpacks] Plugin enabled.");
 
+        // Saves default config, and creates directory.
+        saveDefaultConfig();
+
         inventoryFile = new File(getDataFolder(), "InventoryData.yml");
         if (!inventoryFile.exists()) {
             try {
@@ -52,6 +55,7 @@ public class Main extends JavaPlugin {
 
     private void registerCommands() {
         getCommand("backpack").setExecutor(new Backpack());
+
 
     }
 
